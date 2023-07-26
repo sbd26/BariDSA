@@ -6,7 +6,7 @@ bool prime_arr[MX];
 
 
 void sieve(int n){
-  for (int i = 3; i * i <= n; i++)
+  for (int i = 3; i * i <= n; i+=2)
     if (!prime_arr[i])
       for(int j = i * i; j <= n; j+=i)
         prime_arr[j] = true;
